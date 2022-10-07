@@ -1,0 +1,50 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:linear-gradient(to right, #00AAFF,#00FFCC)
+}
+.grid{
+    display:grid;
+    margin-top: 2rem;
+    grid-template-columns:repeat(4,6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5,6rem);
+    justify-content: center;
+}
+.span{
+    grid-column: span 2;
+    
+}
+.green{
+    grid-column: 1/-1;
+    background-color: rgba(20, 71, 54, 0.719);
+    color: rgba(240, 248, 255, 0.797);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-end;
+    word-wrap:break-word;
+    word-break: break-all;
+    padding: 0.75rem;
+}
+.grid button{
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px  solid white;
+    outline: none;
+}
+.grid button:hover,
+.grid button:focus{
+    background-color: rgba(202, 212, 221, 0.862);
+}
+
+.green .upper{
+    
+    font-size: 1.5rem;
+}
+.green .lower{
+    font-size: 3rem;
+}
